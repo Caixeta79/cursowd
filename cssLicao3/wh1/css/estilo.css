@@ -1,0 +1,53 @@
+/* Estilos para o link Skip to Main Content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .skip-link:focus {
+    top: 10px;
+  }
+  
+  /* Estilos para a navegação */
+  nav.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /* Estilo das imagens */
+  img {
+    border: 3px solid #ccc;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .grid img {
+    width: 100%;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Pseudo-classes e seletores avançados */
+  img:nth-child(odd) {
+    border-radius: 15px;
+  }
+  
+  img:nth-child(even) {
+    border-radius: 5px;
+  }
+  
