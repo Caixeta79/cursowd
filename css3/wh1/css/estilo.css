@@ -1,0 +1,81 @@
+/* Estilização global do body */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do header */
+header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto no header */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilização do nav */
+nav {
+    background-color: #333; /* Cor de fundo escura */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    display: inline-block; /* Itens lado a lado */
+    width: 120px; /* Largura fixa para os itens */
+    text-align: center;
+}
+
+nav a {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização do main */
+main {
+    background-color: #f4f4f4; /* Cor de fundo cinza claro */
+    font-size: 18px; /* Tamanho maior da fonte */
+    padding: 20px;
+}
+
+/* Estilização do footer */
+footer {
+    background-color: #222; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilização da tag h1 */
+h1 {
+    text-align: center; /* Alinhamento centralizado */
+    font-family: "Georgia", serif; /* Família da fonte */
+    color: #333; /* Cor do texto escura */
+}
+
+/* Estilização da tag p */
+p {
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 15px;
+}
+
+/* Estilização da tag li */
+li {
+    display: inline-block; /* Exibição lado a lado */
+    width: 100px; /* Definindo uma largura para os itens */
+    text-align: center;
+}
