@@ -1,0 +1,108 @@
+/* Estilização global do body */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do header */
+header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: #fff; /* Cor do texto no header */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilização do nav */
+nav {
+    display: inline-block; /* Define o elemento como inline-block */
+    width: 80%; /* Define a largura para cerca de 80% */
+    background-color: #333; /* Cor de fundo escura */
+    padding: 10px; /* Espaçamento interno */
+}
+
+nav img {
+    width: 10%; /* Define a largura da imagem para cerca de 10% */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    display: inline-block; /* Itens lado a lado */
+    width: 120px; /* Largura fixa para os itens */
+    text-align: center;
+}
+
+nav a {
+    color: #fff; /* Cor do texto dos links */
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilização do main */
+main {
+    background-color: #f4f4f4; /* Cor de fundo cinza claro */
+    font-size: 18px; /* Tamanho maior da fonte */
+    padding: 20px;
+}
+
+/* Estilização do footer */
+footer {
+    background-color: #222; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Estilização da tag h1 */
+h1 {
+    text-align: center; /* Alinhamento centralizado */
+    font-family: "Georgia", serif; /* Família da fonte */
+    color: #333; /* Cor do texto escura */
+}
+
+/* Estilização da tag p */
+p {
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 15px;
+}
+
+.grid {
+    display: flex; /* Ativa o layout Flexbox */
+    flex-wrap: wrap; /* Permite que os itens "quebrem" em várias linhas */
+    justify-content: space-between; /* Distribui as colunas com espaçamento entre elas */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    row-gap: 20px; /* Define o espaçamento vertical entre as linhas */
+}
+
+.grid > * {
+    flex: 0 0 40%; /* Cada coluna ocupa aproximadamente 40% da largura do contêiner */
+}
+
+.flex {
+    display: flex; /* Ativa o modelo de layout Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: space-between; /* Distribui os itens com espaçamento entre eles */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+
+
+
+/* li {
+    display: inline-block; 
+    width: 100px;
+    text-align: center;
+} */
