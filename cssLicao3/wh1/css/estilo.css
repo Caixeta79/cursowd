@@ -7,47 +7,112 @@
     color: white;
     padding: 10px;
     text-decoration: none;
-  }
-  
-  .skip-link:focus {
+    z-index: 1000; /* Certifica-se de que esteja acima de outros elementos */
+    transition: top 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.skip-link:focus {
     top: 10px;
-  }
-  
-  /* Estilos para a navegação */
-  nav.flex {
+}
+
+/* Estilos para a navegação */
+nav.flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
-  
-  /* Estilo das imagens */
-  img {
+    background-color: #333; /* Adiciona um fundo para contraste */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilo das imagens */
+img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem o tamanho do container */
+    height: auto; /* Mantém a proporção */
     border: 3px solid #ccc;
     padding: 5px;
     border-radius: 10px;
-  }
-  
-  .grid {
+    display: block; /* Garante que as imagens não tenham espaços extras */
+}
+
+/* Estilo para o grid */
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta o layout das imagens */
     gap: 20px;
-  }
-  
-  .grid img {
-    width: 100%;
-  }
-  
-  nav a:hover {
-    background-color: #555;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  /* Pseudo-classes e seletores avançados */
-  img:nth-child(odd) {
+    margin: 20px 0; /* Espaçamento adicional */
+}
+
+.grid img {
+    width: 100%; /* As imagens ocupam toda a célula do grid */
+    object-fit: cover; /* Garante que as imagens sejam exibidas corretamente */
+    border-radius: 10px;
+}
+
+/* Pseudo-classes e seletores avançados */
+img:nth-child(odd) {
     border-radius: 15px;
-  }
-  
-  img:nth-child(even) {
+}
+
+img:nth-child(even) {
     border-radius: 5px;
-  }
-  
+}
+
+/* Estilo para o body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o header */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    max-width: 200px; /* Limita o tamanho da imagem do cabeçalho */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin: 0;
+    color: #4CAF50;
+    font-size: 2em;
+}
+
+/* Estilo para o footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
