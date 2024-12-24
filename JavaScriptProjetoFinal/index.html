@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="gallery.css">
-    <script src="gallery.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria Interativa de Fotos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="image">
-        Hover over an image below to display here.
-    </div>
-
-    <img class="preview" alt="Styling with a Bandana" 
-         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" 
-         onmouseover="upDate(this)" onmouseout="unDo()">
-
-    <img class="preview" alt="With My Boy" 
-         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" 
-         onmouseover="upDate(this)" onmouseout="unDo()">
-
-    <img class="preview" alt="Young Puppy" 
-         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" 
-         onmouseover="upDate(this)" onmouseout="unDo()">
+  <h2>Galeria Interativa de Fotos</h2>
+  <h4>(Imagens de Freepik)</h4>
+  <div id="image-display" class="image-display">Passe o mouse sobre uma imagem abaixo para exibi-la aqui.</div>
+  <div class="image-container">
+    <img class="preview" src="https://img.freepik.com/fotos-gratis/vista-superior-do-calendario-2024-sobre-uma-mesa-de-madeira-com-espaco-de-copia_23-2149915188.jpg" alt="Imagem 1 do Freepik">
+    <img class="preview" src="https://img.freepik.com/fotos-gratis/vista-superior-do-calendario-2024-sobre-uma-mesa-de-madeira-com-espaco-de-copia_23-2149915188.jpg" alt="Imagem 2 do Freepik">
+    <img class="preview" src="https://img.freepik.com/fotos-gratis/vista-superior-do-calendario-2024-sobre-uma-mesa-de-madeira-com-espaco-de-copia_23-2149915188.jpg" alt="Imagem 3 do Freepik">
+    <img class="preview" src="https://img.freepik.com/fotos-gratis/vista-superior-do-calendario-2024-sobre-uma-mesa-de-madeira-com-espaco-de-copia_23-2149915188.jpg" alt="Imagem 4 do Freepik">
+    <img class="preview" src="https://img.freepik.com/fotos-gratis/vista-superior-do-calendario-2024-sobre-uma-mesa-de-madeira-com-espaco-de-copia_23-2149915188.jpg" alt="Imagem 5 do Freepik">
+    <img class="preview" src="https://img.freepik.com/fotos-gratis/lindo-arranjo-de-flores-no-fundo-branco_23-2149066146.jpg" alt="Imagem 6 do Freepik">
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
