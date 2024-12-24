@@ -1,24 +1,45 @@
 function upDate(previewPic) {
-    // 1) Altera a imagem de fundo da div com id "image" para a URL da imagem
-    const imageDiv = document.getElementById("image");
-    imageDiv.style.backgroundImage = `url('${previewPic.src}')`;
+  console.log("Evento disparado!");
+  console.log("Source:", previewPic.src);
+  console.log("Texto alternativo:", previewPic.alt);
 
-    // 2) Altera o texto da div com id "image" para o texto alternativo (alt) da imagem
-    imageDiv.innerText = previewPic.alt;
-
-    // Para depuração, você pode usar console.log
-    console.log("Imagem alterada para:", previewPic.src);
-    console.log("Texto alterado para:", previewPic.alt);
+  const imageDiv = document.getElementById("image-display");
+  imageDiv.innerHTML = `<img src="${previewPic.src}" alt="${previewPic.alt}" style="max-width: 100%; max-height: 100%;">`;
 }
 
-function unDo() {
-    // 1) Atualiza a URL da imagem de fundo da div "image" para o valor original
-    const imageDiv = document.getElementById("image");
-    imageDiv.style.backgroundImage = "url('')";
-
-    // 2) Atualiza o texto da div "image" para o texto original
-    imageDiv.innerText = "Hover over an image below to display here.";
-
-    // Para depuração, você pode usar console.log
-    console.log("Imagem de fundo e texto restaurados ao original.");
+function undo() {
+  const imageDiv = document.getElementById("image-display");
+  imageDiv.textContent = "Passe o mouse sobre uma imagem abaixo para exibi-la aqui.";
 }
+
+function handleFocus(previewPic) {
+  console.log("Foco disparado!");
+  upDate(previewPic);
+}
+
+function handleBlur() {
+  console.log("Perda de foco disparada!");
+  undo();
+}
+
+function setTabFocus() {
+  console.log("Página carregada, configurando tabindex para imagens.");
+  const images = document.querySelectorAll(".preview");
+  images.forEach((img, index) => {
+    img.setAttribute("tabindex", "0");
+    console.log(`Tabindex adicionado à imagem ${index + 1}`);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM totalmente carregado e analisado.");
+  setTabFocus();
+
+  // Adiciona os eventos às imagens
+  document.querySelectorAll(".preview").forEach((img) => {
+    img.addEventListener("mouseover", () => upDate(img));
+    img.addEventListener("mouseout", undo);
+    img.addEventListener("focus", () => handleFocus(img));
+    img.addEventListener("blur", handleBlur);
+  });
+});
