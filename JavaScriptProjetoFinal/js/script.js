@@ -31,6 +31,18 @@ function setTabFocus() {
   });
 }
 
+function observeSrcChanges() {
+  const images = document.querySelectorAll(".preview");
+  images.forEach((img) => {
+    const observer = new MutationObserver(() => {
+      console.log("Atributo 'src' alterado para:", img.src);
+      upDate(img); // Atualiza o plano de fundo automaticamente
+    });
+
+    observer.observe(img, { attributes: true, attributeFilter: ["src"] });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("DOM totalmente carregado e analisado.");
   setTabFocus();
@@ -42,4 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     img.addEventListener("focus", () => handleFocus(img));
     img.addEventListener("blur", handleBlur);
   });
+
+  // Monitora alterações no atributo 'src'
+  observeSrcChanges();
 });
