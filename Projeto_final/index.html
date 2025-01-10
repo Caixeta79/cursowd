@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="top">Final Project</h1>
+  </header>
+
+  <main>
+    <p>Welcome to my project! Below you'll find a collection of images and additional dynamic content to enhance the experience.</p>
+    <p>Scroll through the images and enjoy the added functionalities. Feel free to explore the dynamic elements embedded within the page.</p>
+    
+    <!-- Carrossel de Imagens -->
+    <div class="carousel">
+      <button class="prev" aria-label="Previous Slide">❮</button>
+      <div class="carousel-slides">
+        <figure>
+          <img src="images/Red.jpg" alt="Beautiful tree">
+          <figcaption>Tree</figcaption>
+        </figure>
+        <figure>
+          <img src="images/Orange.jpg" alt="Serene lake">
+          <figcaption>Lake</figcaption>
+        </figure>
+        <figure>
+          <img src="images/Yellow.jpg" alt="Blooming rose">
+          <figcaption>Rose</figcaption>
+        </figure>
+      </div>
+      <button class="next" aria-label="Next Slide">❯</button>
+    </div>
+
+    <!-- Mapa do Google -->
+    <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Final Project - <a href="#top">Back to Top</a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
